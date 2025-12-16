@@ -6,6 +6,11 @@
 --color-primary:rgb(255,255,255);
 --color-text:black;
 --color-dark-white:#F5F5F5;
+--color-light-gray:rgb(245,245,245);
+--color-dark-gray:rgb(236,236,236);
+--color-text-gray:rgb(56,56,56);
+--color-text:rgb(119,119,119);
+--color-graish :rgb(97,97,97);
  --font-mon: "Montserrat", sans-serif;
 }
 
