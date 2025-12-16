@@ -9,7 +9,7 @@
       :autoplay="{ delay: 8000 }"
       :navigation="navigationOptions"
       @swiper="onSwiperInit"
-      class="h-screen"
+      style="height: calc(100vh - 105px)"
     >
       <SwiperSlide
         v-for="item in sliders"
@@ -55,12 +55,9 @@
       >
         <Icon name="lucide:chevron-left" class="size-10" />
       </button>
-
-      
     </div>
 
      <div class="absolute bottom-1/2 end-2 z-30">
-
       <button
         ref="nextEl"
         class="opacity-0 hover:opacity-100 size-14 cursor-pointer flex items-center justify-center  hover:bg-black/40 text-white rounded-full backdrop-blur-md    transition-opacity duration-500 ease-in-out"
