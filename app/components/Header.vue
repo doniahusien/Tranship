@@ -1,16 +1,17 @@
 <template>
-  <header class=" bg-dark-white p-2 md:p-4 font-light fixed w-full flex justify-between md:justify-around flex-wrap md:text-base font-400">
-    <ul class="flex items-center justify-center gap-5">
+  <header class=" bg-dark-white p-2 md:p-4 font-light fixed  w-full md:text-base">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6">
+    <ul class="flex  gap-5">
       <li class="flex items-center justify-center gap-1 ">
-        <Icon name="lineicons:phone" class="text-secondary " />
+        <Icon name="lineicons:phone" class="text-secondary font-semibold" />
         <span  >1-234-567-8000</span>
       </li>
       <li class=" hidden md:flex items-center justify-center gap-1">
-        <Icon name="mdi-light:email" class="text-secondary" />
+        <Icon name="mdi-light:email" class="text-secondary font-semibold" />
         <span >tranship@mail.com</span>
       </li>
       <li class="hidden md:flex items-center justify-center gap-1">
-        <Icon name="mdi-light:clock" class="text-secondary" />
+        <Icon name="mdi-light:clock" class="text-secondary font-semibold" />
         <span>Sat - Thu: 8AM - 7PM</span>
       </li>
     </ul>
@@ -36,5 +37,6 @@
         </a>
       </li>
     </ul>
+    </div>
   </header>
 </template>

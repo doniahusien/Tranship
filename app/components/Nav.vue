@@ -28,7 +28,7 @@ const mega = ref([
   "Typography",
 ]);
 const handleScroll = () => {
-  if (window.scrollY > 40) {
+  if (window.scrollY > 50) {
     isSticky.value = true;
   } else {
     isSticky.value = false;
@@ -46,8 +46,8 @@ onUnmounted(() => {
 <template>
   <nav
     :class="[
-      'bg-white p-4 w-full relative shadow-md transition-all duration-300 z-50',
-      isSticky ? 'fixed top-0' : 'relative top-12 md:top-14',
+      'bg-white fixed p-4 w-full  shadow-md transition-all duration-300 z-50',
+      isSticky ? 'fixed ' : 'relative top-12 md:top-14',
     ]"
   >
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6">
