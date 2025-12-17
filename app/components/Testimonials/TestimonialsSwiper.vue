@@ -3,6 +3,7 @@
     :modules="[Navigation, Autoplay]"
     :slides-per-view="1"
     :loop="true"
+    :speed="1800"
     :autoplay="{ delay: 8000 }"
     class="pb-24"
   >

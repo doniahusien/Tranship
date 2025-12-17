@@ -14,6 +14,7 @@
           delay: 2000,
           disableOnInteraction: false,
         }"
+        :spped="1800"
         loop
         free-mode
         grab-cursor

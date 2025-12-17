@@ -63,7 +63,10 @@
         </h3>
         <ul class="space-y-3 text-sm">
          <li v-for="service in servicesList" :key="service">
-      {{ service }}
+         <NuxtLink :to="localePath(`/services/${service}`)">
+           {{ service }}
+         </NuxtLink>
+    
     </li>
         </ul>
       </div>
