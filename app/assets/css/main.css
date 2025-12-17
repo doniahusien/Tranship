@@ -62,7 +62,7 @@ font-family: 'Montserrat';
   @apply bg-white text-text font-mon ;
  }
  button{
-    @apply cursor-pointer;
+    @apply cursor-pointer transition-colors duration-500 ease-out;
  }
  
   .overlay {
