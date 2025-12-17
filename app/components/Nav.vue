@@ -53,8 +53,8 @@ onUnmounted(() => {
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6">
       <NuxtImg src="/logo2x.png" class="object-contain w-32 md:w-48" alt="logo" />
       <ul class="hidden md:flex items-center gap-8 text-base font-light">
-        <li><NuxtLink class="hover:text-secondary" to="#">Home</NuxtLink></li>
-        <li><NuxtLink class="hover:text-secondary" to="#">About Us</NuxtLink></li>
+        <li><NuxtLink class="hover:text-secondary" to="/">Home</NuxtLink></li>
+        <li><NuxtLink class="hover:text-secondary" to="/">About Us</NuxtLink></li>
         <li
           class="relative"
           @mouseenter="showservices = true"

@@ -8,9 +8,13 @@
 --color-dark-white:#F5F5F5;
 --color-light-gray:rgb(245,245,245);
 --color-dark-gray:rgb(236,236,236);
+--color-footer:rgb(56,56,56);
+--color-dark:rgb(69,69,69);
+--color-dark-footer:rgb(47,47,47);
 --color-text-gray:rgb(56,56,56);
 --color-text:rgb(119,119,119);
 --color-graish :rgb(97,97,97);
+--color-semi-white:rgb(248,248,248);
  --font-mon: "Montserrat", sans-serif;
 }
 
@@ -63,6 +67,12 @@ font-family: 'Montserrat';
  
   .overlay {
     @apply absolute inset-0 bg-black/40;
+  }
+  .input_wrapper input, textarea{
+    @apply p-3.5 border w-full border-gray-200 rounded-md focus:outline-none focus:shadow-sm focus:border-light-gray  text-sm font-medium;
+  }
+  .error{
+    @apply text-red-500 text-xs mt-1 font-light;
   }
 }
 
