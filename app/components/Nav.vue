@@ -3,8 +3,11 @@ const isSticky = ref(false);
 const showMega = ref(false);
 const showservices = ref(false);
 const toggle = ref(false);
-const {t,locale} = useI18n();
 
+const { locale, t, setLocale } = useI18n();
+const switchLocalePath = useSwitchLocalePath();
+const targetLocale = computed(() => (locale.value === "ar" ? "en" : "ar"));
+const switchPath = computed(() => switchLocalePath(targetLocale.value));
 
 const isRTL = computed(() => locale.value === 'ar')
 const localePath= useLocalePath();
@@ -119,6 +122,10 @@ onUnmounted(() => {
             >{{$t("TITLES.GET_QUOTE")}}</NuxtLink
           >
         </li>
+            <NuxtLink :to="switchPath" class="hidden lg:flex items-center text-secondary">
+            <Icon name="fluent:globe-48-filled" class="size-5" />
+            <span> {{ $t(`locale.${locale}`) }}</span>
+          </NuxtLink>
       </ul>
 
       <button

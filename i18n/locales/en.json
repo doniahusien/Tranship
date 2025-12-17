@@ -1,5 +1,8 @@
 {
-
+"locale": {
+    "en": "AR",
+    "ar": "EN"
+  },
   "FOOTER": {
     "aboutUs": "ABOUT US",
     "aboutDesc": "We are a leading logistics company providing world-class transport, warehousing, and delivery services with reliability and efficiency.",
