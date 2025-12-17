@@ -1,7 +1,7 @@
 <template>
-  <header class=" bg-dark-white p-2 md:p-4 font-light fixed  w-full md:text-base">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6">
-    <ul class="flex  gap-5">
+  <header class=" bg-dark-white p-2 md:p-4 font-light fixed  w-full text-sm md:text-base">
+    <div class="max-w-7xl mx-auto flex items-center md:justify-between md:px-6">
+    <ul class="flex gap-5">
       <li class="flex items-center justify-center gap-1 ">
         <Icon name="lineicons:phone" class="text-secondary font-semibold" />
         <span  >1-234-567-8000</span>
@@ -17,24 +17,24 @@
     </ul>
     <ul class="flex justify-between ms-auto md:ms-0 ">
       <li>
-        <a href="#">
+        <NuxtLink to="/">
           <Icon name="ri:facebook-fill" class="text-secondary mx-2 size-4" />
-        </a>
+        </NuxtLink>
       </li>
       <li>
-        <a href="#">
+        <NuxtLink to="/">
           <Icon name="mdi:twitter" class="text-secondary mx-2 size-4" />
-        </a>
+        </NuxtLink>
       </li>
       <li>
-        <a href="#">
+        <NuxtLink to="/">
           <Icon name="basil:linkedin-solid" class="text-secondary mx-2 size-4" />
-        </a>
+        </NuxtLink>
       </li>
       <li>
-        <a href="#">
+        <NuxtLink to="/">
           <Icon name="mdi:google-plus" class="text-secondary mx-2 size-4" />
-        </a>
+        </NuxtLink>
       </li>
     </ul>
     </div>

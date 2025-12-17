@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { Form as VeeForm } from "vee-validate";
 import * as yup from "yup";
-
+const {t,locale} = useI18n();
+const isRTL = computed(() => locale.value === 'ar')
 const schema = yup.object({
   name: yup.string().required("Name is required"),
   email: yup.string().email("Invalid email").required("Email is required"),
@@ -16,7 +17,7 @@ const handleSubmit = (values: any) => {
 </script>
 
 <template>
-  <section class="bg-semi-white py-5 lg:p-0 ">
+  <section class="bg-semi-white py-5 px-2 lg:p-0 ">
 <div class="container mx-auto grid grid-cols-1 md:grid-cols-2">
     <div class="hidden relative max-w-xl  md:flex items-center  overflow-hidden">
     <NuxtImg
@@ -28,15 +29,16 @@ const handleSubmit = (values: any) => {
         object-contain
         object-left
       "
+      :class="[isRTL? 'scale-x-[-1]' : '']"
     />
   </div>
     <div class="flex flex-col justify-center md:px-10">
-      <h2 class="text-secondary text-3xl font-semibold mb-4 uppercase">
-        Quick quote
+      <h2 class="text-secondary text-xl md:text-3xl font-semibold mb-4 uppercase">
+        {{$t('TITLES.GET_QUOTE')}}
       </h2>
 
-      <p class="mb-8 text-gray-600 max-w-xl">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      <p class="mb-8 text-base md:text-xl text-gray-600 max-w-xl">
+        {{$t('LABELS.GENERAL_DESC')}}
       </p>
 
       <VeeForm
@@ -45,18 +47,18 @@ const handleSubmit = (values: any) => {
         class="space-y-5 max-w-xl"
       >
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <inputsBase name="name" placeholder="Name *" />
-          <inputsBase name="email" type="email" placeholder="Email *" />
+          <inputsBase name="name" :placeholder="$t('TITLES.name')" />
+          <inputsBase name="email" type="email" :placeholder="$t('TITLES.email')"  />
         </div>
 
         <div class="grid  grid-cols-1 md:grid-cols-2 gap-4">
-          <inputsBase name="phone" placeholder="Phone" />
-          <inputsBase name="interest" placeholder="Interest of Service" />
+          <inputsBase name="phone" :placeholder="$t('TITLES.phone')"  />
+          <inputsBase name="interest" :placeholder="$t('TITLES.interest')"  />
         </div>
 
         <inputsTextarea
           name="message"
-          placeholder="Message *"
+         :placeholder="$t('TITLES.message')" 
           rows="5"
         />
 
@@ -64,7 +66,7 @@ const handleSubmit = (values: any) => {
           type="submit"
           class="bg-secondary text-white px-8 py-3 rounded-md uppercase"
         >
-          Submit
+          {{$t('BUTTONS.SUBMIT')}}
         </button>
       </VeeForm>
     </div>

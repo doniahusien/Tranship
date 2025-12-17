@@ -15,7 +15,7 @@
         :class="
           !meta.valid &&
           meta.touched &&
-          'border-error placeholder:text-error lg:text-lg text-sm min-h-[130px] resize-none'
+          'border-error placeholder:text-error lg:text-lg min-h-30 resize-none'
         "
       />
 <!-- 
@@ -32,7 +32,7 @@
 <script setup>
 defineProps({
   id: {
-    required: true,
+    required: false,
   },
   name: {
     required: true,

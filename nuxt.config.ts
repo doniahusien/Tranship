@@ -33,7 +33,7 @@ export default defineNuxtConfig({
     'nuxt-swiper',
     "@nuxt/image",
     "@nuxt/ui",
-    'nuxt-icon',
+    '@nuxt/icon',
     [
       "@vee-validate/nuxt",
       {
@@ -49,6 +49,7 @@ export default defineNuxtConfig({
     [
       "@nuxtjs/i18n",
       {
+        legacy: false,
         defaultLocale: "en",
         langDir: "locales",
         lazy: true,

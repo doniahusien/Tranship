@@ -69,7 +69,7 @@ font-family: 'Montserrat';
     @apply absolute inset-0 bg-black/40;
   }
   .input_wrapper input, textarea{
-    @apply p-3.5 border w-full border-gray-200 rounded-md focus:outline-none focus:shadow-sm focus:border-light-gray  text-sm font-medium;
+    @apply p-3.5 border w-full border-gray-200 rounded-md focus:outline-none focus:shadow-sm focus:border-light-gray  text-sm font-light;
   }
   .error{
     @apply text-red-500 text-xs mt-1 font-light;

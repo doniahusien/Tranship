@@ -1,11 +1,9 @@
 <template>
   <div>
-    <h4 class="text-3xl font-light">Watch the video and take</h4>
-    <h5 class="text-secondary text-4xl">some idea about our company</h5>
+    <h4 class="text-3xl font-light"> {{$t('TITLES.watchVideoLine1')}}</h4>
+    <h5 class="text-secondary  text-2xl md:text-4xl">{{$t('TITLES.watchVideoLine2')}}</h5>
     <p class="py-5 ">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
-    </p>
+      {{$t('LABELS.GENERAL_DESC')}} </p>
     <div class="video-wrapper">
       <iframe
         class="video"
@@ -19,7 +17,9 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+    const {t} = useI18n();
+</script>
 <style scoped>
 .video-wrapper {
   aspect-ratio: 16 / 9;

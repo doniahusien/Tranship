@@ -35,7 +35,7 @@
 <script setup>
 defineProps({
   id: {
-    required: true,
+    required: false,
   },
   name: {
     required: true,
@@ -60,8 +60,6 @@ defineProps({
 const emit = defineEmits(["change"]);
 </script>
 
-<style lang="scss" scoped>
-.error {
-  @apply text-error text-[16px]  border border-secondary;
-}
+<style scoped>
+
 </style>

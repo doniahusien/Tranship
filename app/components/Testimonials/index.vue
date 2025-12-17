@@ -1,15 +1,17 @@
 <template>
   <div>
-    <h2 class="text-3xl font-light">Our Happy</h2>
-    <h3 class="text-secondary text-4xl">Client Says</h3>
+    <h2 class="text-3xl font-light">{{$t('TITLES.OUR_HAPPY')}}</h2>
+    <h3 class="text-secondary text-2xl md:text-4xl">{{$t('TITLES.CLIENT')}}</h3>
     <p class="py-5">
-      Lorem ipsum dolor sit amet, consectetur t adipiscing elit, sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua veniam quis.
-    </p>
+     
+     {{$t('LABELS.GENERAL_DESC')}} </p>
     <TestimonialsSwiper />
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  const {t} = useI18n();
+
+</script>
 
 <style scoped></style>

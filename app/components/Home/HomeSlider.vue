@@ -24,7 +24,7 @@
         >
           <div
             v-html="item.title"
-            class=" md:text-2xl max-w-100  lg:text-3xl"
+            class="text-base md:text-2xl max-w-100 lg:text-3xl"
           ></div>
 
           <div
@@ -33,14 +33,14 @@
           ></div>
           <div class="flex gap-2">
           <NuxtLink
-            class=" font-semibold  px-5 py-3.5 rounded-lg bg-secondary text-white hover:bg-black transition-colors duration-500 ease-in-out"
-            href="#"
-            >OUR SERVICES</NuxtLink
+            class="text-sm md:text-base font-semibold px-3  md:px-5 py-3.5 rounded-lg bg-secondary text-white hover:bg-black transition-colors duration-500 ease-in-out"
+            :to="localePath('/services')"
+            >{{$t('TITLES.OUR_SERVICES')}}</NuxtLink
           >
           <NuxtLink
-            class=" font-semibold  px-5 py-3.5 rounded-lg bg-secondary text-white hover:bg-black transition-colors duration-500 ease-in-out"
-            href="#"
-            >GET A QUOTE</NuxtLink
+            class="text-sm md:text-base font-semibold px-3 md:px-5 py-3.5 rounded-lg bg-secondary text-white hover:bg-black transition-colors duration-500 ease-in-out"
+            :to="localePath('/get-quote')"
+            >{{$t('TITLES.GET_QUOTE')}}</NuxtLink
           >
           </div>
         </div>
@@ -75,6 +75,8 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
+const {t} =useI18n();
+const localePath= useLocalePath();
 const prevEl = ref(null);
 const nextEl = ref(null);
 
@@ -94,23 +96,20 @@ const onSwiperInit = (swiper) => {
 const sliders= ref([{
   key:"start",
   image:"/images/banner1.jpeg",
- title: "WORLD WIDE TRANSPORT SERVICE",
-desc:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto."
-
+ title: t("TITLES.SLIDER"),
+    desc: t("LABELS.SLIDER_DESC")
 },
 {
   key:"center",
   image:"/images/banner2.jpeg",
-   title: "WORLD WIDE TRANSPORT SERVICE",
-desc:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto."
-
+   title: t("TITLES.SLIDER"),
+    desc: t("LABELS.SLIDER_DESC")
 },
 {
   key:"end",
   image:"/images/banner3.jpeg",
-   title: "WORLD WIDE TRANSPORT SERVICE",
-desc:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto."
-
+  title: t("TITLES.SLIDER"),
+    desc: t("LABELS.SLIDER_DESC")
 }
 ])
 
