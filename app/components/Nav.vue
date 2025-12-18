@@ -39,12 +39,12 @@ const links = [
     name: "OUR_SERVICES",
     img: false,
     items: [
-     { name: "LAND_TRANSPORT", path: "/services/land-transport" },
-  { name: "WAREHOUSING", path: "/services/warehousing" },
-  { name: "FAST_DELIVERY", path: "/services/fast-delivery" },
-  { name: "WORLDWIDE_TRANSPORT", path: "/services/worldwide-transport" },
-  { name: "SEA_FREIGHT", path: "/services/sea-freight" },
-  { name: "RELIABLE", path: "/services/reliable" },
+      { name: "LAND_TRANSPORT", path: "/services/land-transport" },
+      { name: "WAREHOUSING", path: "/services/warehousing" },
+      { name: "FAST_DELIVERY", path: "/services/fast-delivery" },
+      { name: "WORLDWIDE_TRANSPORT", path: "/services/worldwide-transport" },
+      { name: "SEA_FREIGHT", path: "/services/sea-freight" },
+      { name: "RELIABLE", path: "/services/reliable" },
     ],
   },
   {
@@ -57,29 +57,29 @@ const links = [
     path: "/services/extend",
     name: "PAGES",
     img: true,
-  items :[
-  { name: "ABOUT", path: "/about" },
-  { name: "PROJECT_LIST", path: "/projects" },
-  { name: "GALLERY", path: "/gallery" },
-  { name: "ABOUT_EXTEND", path: "/about/extend" },
-  { name: "SERVICE_LIST_EXTEND", path: "/services/extend" },
-  { name: "GALLERY_EXTEND", path: "/gallery/extend" },
-  { name: "TEAM", path: "/team" },
-  { name: "SERVICE_SINGLE", path: "/services/:slug" },
-  { name: "PHOTO_GALLERY", path: "/photo-gallery" },
-  { name: "FAQS", path: "/faqs" },
-  { name: "SERVICE_SINGLE_EXTEND", path: "/services/:slug/extend" },
-  { name: "PHOTO_GALLERY_ALL", path: "/photo-gallery/all" },
-  { name: "FAQS_EXTEND", path: "/faqs/extend" },
-  { name: "SERVICE_LIST", path: "/services" },
-  { name: "ERROR_404", path: "/404" },
-  { name: "PRODUCT_LIST", path: "/products" },
-  { name: "PRODUCT_SINGLE", path: "/products/:slug" },
-  { name: "PROJECT_LIST_EXTEND", path: "/projects/extend" },
-  { name: "PROJECT_SINGLE", path: "/projects/:slug" },
-  { name: "MEGA_NEW", path: "/mega-new" },
-  { name: "TYPOGRAPHY", path: "/typography" },
-  ],
+    items: [
+      { name: "ABOUT", path: "/about" },
+      { name: "PROJECT_LIST", path: "/projects" },
+      { name: "GALLERY", path: "/gallery" },
+      { name: "ABOUT_EXTEND", path: "/about/extend" },
+      { name: "SERVICE_LIST_EXTEND", path: "/services/extend" },
+      { name: "GALLERY_EXTEND", path: "/gallery/extend" },
+      { name: "TEAM", path: "/team" },
+      { name: "SERVICE_SINGLE", path: "/services/:slug" },
+      { name: "PHOTO_GALLERY", path: "/photo-gallery" },
+      { name: "FAQS", path: "/faqs" },
+      { name: "SERVICE_SINGLE_EXTEND", path: "/services/:slug/extend" },
+      { name: "PHOTO_GALLERY_ALL", path: "/photo-gallery/all" },
+      { name: "FAQS_EXTEND", path: "/faqs/extend" },
+      { name: "SERVICE_LIST", path: "/services" },
+      { name: "ERROR_404", path: "/404" },
+      { name: "PRODUCT_LIST", path: "/products" },
+      { name: "PRODUCT_SINGLE", path: "/products/:slug" },
+      { name: "PROJECT_LIST_EXTEND", path: "/projects/extend" },
+      { name: "PROJECT_SINGLE", path: "/projects/:slug" },
+      { name: "MEGA_NEW", path: "/mega-new" },
+      { name: "TYPOGRAPHY", path: "/typography" },
+    ],
   },
   {
     type: "link",
@@ -104,7 +104,7 @@ const links = [
       />
 
       <ul
-        class="hidden md:flex items-center gap-3 lg:gap-5 text-sm  lg:text-base font-light"
+        class="hidden md:flex items-center gap-3 lg:gap-5 text-sm lg:text-base font-light"
       >
         <li v-for="item in links" :key="item.name" class="relative">
           <NuxtLink
@@ -117,7 +117,7 @@ const links = [
           </NuxtLink>
 
           <button
-          aria-label="menu"
+            aria-label="menu"
             v-else
             class="hover:text-secondary flex items-center gap-1"
             @mouseenter="open(item.name)"
@@ -125,34 +125,6 @@ const links = [
           >
             {{ $t(`TITLES.${item.name}`) }} <span>▾</span>
           </button>
-
-    <Transition
-            enter-active-class="transition ease-out duration-300"
-            enter-from-class="opacity-0 translate-y-2"
-            enter-to-class="opacity-100 translate-y-0"
-            leave-active-class="transition ease-in duration-200"
-            leave-from-class="opacity-100 translate-y-0"
-            leave-to-class="opacity-0 translate-y-2"
-          >
-          <li
-            v-if="openMenu === item.name && !item.img"
-            class="absolute top-full mt-4 w-64 bg-secondary p-5"
-            @mouseenter="open(item.name)"
-            @mouseleave="close"
-          >
-            <ul class="space-y-3">
-              <li v-for="sub in item.items" :key="sub">
-                <NuxtLink
-                  :to="localePath(sub.path)"
-                  active-class="text-secondary font-semibold"
-                  class="text-white hover:text-gray-200 transition"
-                >
-                  {{ $t(`TITLES.${sub.name}`) }}
-                </NuxtLink>
-              </li>
-            </ul>
-          </li>
-      </Transition>
 
           <Transition
             enter-active-class="transition ease-out duration-300"
@@ -162,66 +134,98 @@ const links = [
             leave-from-class="opacity-100 translate-y-0"
             leave-to-class="opacity-0 translate-y-2"
           >
-          <li
-            v-if="openMenu === item.name && item.img"
-            @mouseenter="open(item.name)"
-            @mouseleave="close"
-            :class="[isRTL ? 'translate-x-1/2' : '-translate-x-1/2']"
-            class="absolute top-full min-w-3xl lg:min-w-5xl mx-auto text-base py-2 text-white"
-          >
-            <div class="grid md:grid-cols-3 lg:grid-cols-4 w-full bg-secondary mt-5 gap-5">
-              <div class="col-span-1">
-                <NuxtImg
-                  src="/images/menubg.jpeg"
-                  alt="menu"
-                  class="w-full h-full"
-                />
-              </div>
-
-              <ul
-                class=" col-span-2 lg:col-span-3 py-10 grid grid-cols-2 lg:grid-cols-3 gap-4 text-sm font-medium"
-              >
+            <li
+              v-if="openMenu === item.name && !item.img"
+              class="absolute top-full mt-4 w-64 bg-secondary p-5"
+              @mouseenter="open(item.name)"
+              @mouseleave="close"
+            >
+              <ul class="space-y-3">
                 <li v-for="sub in item.items" :key="sub">
-                  <Icon
-                    :name="
-                      isRTL
-                        ? 'simple-line-icons:arrow-left'
-                        : 'weui:arrow-outlined'
-                    "
-                    class="text-white align-middle"
-                  />
-
                   <NuxtLink
                     :to="localePath(sub.path)"
-                    class="align-middle ms-1 uppercase font-light"
                     active-class="text-secondary font-semibold"
+                    class="text-white hover:text-gray-200 transition"
                   >
                     {{ $t(`TITLES.${sub.name}`) }}
                   </NuxtLink>
                 </li>
               </ul>
-            </div>
-          </li>
-           </Transition>
+            </li>
+          </Transition>
+
+          <Transition
+            enter-active-class="transition ease-out duration-300"
+            enter-from-class="opacity-0 translate-y-2"
+            enter-to-class="opacity-100 translate-y-0"
+            leave-active-class="transition ease-in duration-200"
+            leave-from-class="opacity-100 translate-y-0"
+            leave-to-class="opacity-0 translate-y-2"
+          >
+            <li
+              v-if="openMenu === item.name && item.img"
+              @mouseenter="open(item.name)"
+              @mouseleave="close"
+              :class="[isRTL ? 'translate-x-1/2' : '-translate-x-1/2']"
+              class="absolute top-full min-w-3xl lg:min-w-5xl mx-auto text-base py-2 text-white"
+            >
+              <div
+                class="grid md:grid-cols-3 lg:grid-cols-4 w-full bg-secondary mt-5 gap-5"
+              >
+                <div class="col-span-1">
+                  <NuxtImg
+                    src="/images/menubg.jpeg"
+                    alt="menu"
+                    class="w-full h-full"
+                  />
+                </div>
+
+                <ul
+                  class="col-span-2 lg:col-span-3 py-10 grid grid-cols-2 lg:grid-cols-3 gap-4 text-sm font-medium"
+                >
+                  <li v-for="sub in item.items" :key="sub">
+                    <Icon
+                      :name="
+                        isRTL
+                          ? 'simple-line-icons:arrow-left'
+                          : 'weui:arrow-outlined'
+                      "
+                      class="text-white align-middle"
+                    />
+
+                    <NuxtLink
+                      :to="localePath(sub.path)"
+                      class="align-middle ms-1 uppercase font-light"
+                      active-class="text-secondary font-semibold"
+                    >
+                      {{ $t(`TITLES.${sub.name}`) }}
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </Transition>
         </li>
-
-        <NuxtLink
-          :to="localePath('/')"
-          class="border w-fit font-semibold border-secondary p-2 lg:p-4 rounded-lg text-secondary"
-        >
-          {{ $t("TITLES.GET_QUOTE") }}
-        </NuxtLink>
-
-       
+        <li>
+          <NuxtLink
+            :to="localePath('/')"
+            class="border w-fit font-semibold border-secondary p-2 lg:p-4 rounded-lg text-secondary"
+          >
+            {{ $t("TITLES.GET_QUOTE") }}
+          </NuxtLink>
+        </li>
       </ul>
- <NuxtLink :to="switchPath" class="flex items-center text-secondary ms-auto md:ms-0">
-          <Icon name="fluent:globe-48-filled" class="size-5" />
-          <span>{{ $t(`locale.${locale}`) }}</span>
-        </NuxtLink>
+      <NuxtLink
+        :to="switchPath"
+        class="flex items-center text-secondary ms-auto md:ms-0"
+      >
+        <Icon name="fluent:globe-48-filled" class="size-5" />
+        <span>{{ $t(`locale.${locale}`) }}</span>
+      </NuxtLink>
       <button
-      aria-label="toggle menu"
+        aria-label="toggle menu"
         @click="toggle = !toggle"
-        class="flex md:hidden px-2  ms-2 items-center rounded-md hover:bg-gray-100 border border-gray-200"
+        class="flex md:hidden px-2 ms-2 items-center rounded-md hover:bg-gray-100 border border-gray-200"
       >
         <Icon name="basil:menu-solid" class="text-black/30 size-8" />
       </button>
