@@ -21,7 +21,7 @@ const handleSubmit = (values: any) => {
 <div class="container mx-auto grid grid-cols-1 md:grid-cols-2">
     <div class="hidden relative max-w-xl  md:flex items-center  overflow-hidden">
     <NuxtImg
-      src="/images/contactbg.png"
+      src="/images/contactbg.webp"
       alt="Contact"
       class="
       w-full

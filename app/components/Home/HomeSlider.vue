@@ -98,19 +98,19 @@ const onSwiperInit = (swiper) => {
 const sliders = ref([
   {
     key: "start",
-    image: "/images/banner1.jpeg",
+    image: "/images/banner1.webp",
     title: t("TITLES.SLIDER"),
     desc: t("LABELS.SLIDER_DESC"),
   },
   {
     key: "center",
-    image: "/images/banner2.jpeg",
+    image: "/images/banner2.webp",
     title: t("TITLES.SLIDER"),
     desc: t("LABELS.SLIDER_DESC"),
   },
   {
     key: "end",
-    image: "/images/banner3.jpeg",
+    image: "/images/banner3.webp",
     title: t("TITLES.SLIDER"),
     desc: t("LABELS.SLIDER_DESC"),
   },

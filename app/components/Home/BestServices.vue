@@ -1,5 +1,5 @@
 <template>
-  <GeneralSection image="/images/bannerGeneral.jpeg">
+  <GeneralSection image="/images/bannerGeneral.webp">
     <div class=" container mx-auto flex flex-col items-center gap-10">
       <h2 class="text-white font-light leading-relaxed uppercase text-xl md:text-2xl lg:text-4xl max-w-5xl text-center ">
       {{$t('LABELS.BEST_SERVICES')}}

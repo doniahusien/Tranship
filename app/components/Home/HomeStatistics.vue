@@ -1,5 +1,5 @@
 <template>
-  <GeneralSection image="/images/general2.jpg">
+  <GeneralSection image="/images/general2.webp">
       <div class=" bg-white rounded-md grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         <div
           v-for="item in stats"
