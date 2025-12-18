@@ -22,6 +22,7 @@
           </p>
           <div class="absolute -bottom-10 left-1/2 -translate-x-1/2">
             <NuxtImg
+            alt="testimonials"
               :src="item.image"
               class="size-20 rounded-md border-2 border-secondary object-cover"
             />
