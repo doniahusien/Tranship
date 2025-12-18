@@ -174,7 +174,7 @@ const links = [
               >
                 <div class="col-span-1">
                   <NuxtImg
-                    src="/images/menubg.jpeg"
+                    src="/images/bannerGeneral.webp"
                     alt="menu"
                     class="w-full h-full"
                   />
