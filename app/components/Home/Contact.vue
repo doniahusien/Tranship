@@ -17,7 +17,7 @@ const handleSubmit = (values: any) => {
 </script>
 
 <template>
-  <section class="bg-semi-white py-5 px-2 lg:p-0 ">
+  <section class="bg-semi-white py-5  px-2 lg:p-0 ">
 <div class="container mx-auto grid grid-cols-1 md:grid-cols-2">
     <div class="hidden relative max-w-xl  md:flex items-center  overflow-hidden">
     <NuxtImg
@@ -37,7 +37,7 @@ const handleSubmit = (values: any) => {
         {{$t('TITLES.GET_QUOTE')}}
       </h2>
 
-      <p class="mb-8 text-base md:text-xl text-gray-600 max-w-xl">
+      <p class="mb-8 text-base lg:text-xl text-gray-600 max-w-xl">
         {{$t('LABELS.GENERAL_DESC')}}
       </p>
 

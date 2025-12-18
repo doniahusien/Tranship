@@ -209,7 +209,7 @@ const links = [
         <li>
           <NuxtLink
             :to="localePath('/')"
-            class="border w-fit font-semibold border-secondary p-2 lg:p-4 rounded-lg text-secondary"
+            class="border w-fit font-semibold border-secondary p-2 lg:p-3 rounded-lg text-secondary hover:bg-secondary hover:text-white transition-colors duration-500 ease-in-out"
           >
             {{ $t("TITLES.GET_QUOTE") }}
           </NuxtLink>

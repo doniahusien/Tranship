@@ -5,7 +5,7 @@
     <HomeBestServices />
     <HomeWhyUs />
 
-    <HomeContact class=" md:-mb-18" />
+    <HomeContact class=" md:-mb-7" />
     <HomeStatistics />
     <HomeTestimonialsAndVideo />
     <HomeBrand/>
