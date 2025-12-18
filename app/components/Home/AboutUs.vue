@@ -43,6 +43,7 @@
             </p>
 
             <NuxtLink
+            aria-label="Read more"
               :to="localePath(`/`)"
               class="inline-block text-secondary rounded-md border border-secondary py-2 px-4
                      transition hover:bg-secondary hover:text-white"

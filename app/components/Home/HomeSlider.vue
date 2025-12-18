@@ -31,11 +31,13 @@
           <div v-html="item.desc" class="text-base max-w-2xl mb-6 opacity-90"></div>
           <div class="flex gap-2">
             <NuxtLink
+              aria-label="our services"
               class="text-sm md:text-base font-semibold px-3 md:px-5 py-3.5 rounded-lg bg-secondary text-white hover:bg-black transition-colors duration-500 ease-in-out"
               :to="localePath('/')"
               >{{ $t("TITLES.OUR_SERVICES") }}</NuxtLink
             >
             <NuxtLink
+              aria-label="get quote"
               class="text-sm md:text-base font-semibold px-3 md:px-5 py-3.5 rounded-lg bg-secondary text-white hover:bg-black transition-colors duration-500 ease-in-out"
               :to="localePath('/')"
               >{{ $t("TITLES.GET_QUOTE") }}</NuxtLink

@@ -6,6 +6,7 @@
       </h2>
 
       <NuxtLink
+      aria-label="get quote"
         class="font-semibold w-fit px-3 md:px-5 py-3.5 rounded-lg bg-secondary text-white hover:bg-white hover:text-secondary transition-colors duration-500 ease-in-out"
         :to="localePath('/')"
         >           {{$t('TITLES.GET_QUOTE')}}</NuxtLink
