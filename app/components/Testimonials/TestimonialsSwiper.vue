@@ -21,7 +21,7 @@
             {{ item.text }}
           </p>
           <div class="absolute -bottom-10 left-1/2 -translate-x-1/2">
-            <img
+            <NuxtImg
               :src="item.image"
               class="size-20 rounded-md border-2 border-secondary object-cover"
             />

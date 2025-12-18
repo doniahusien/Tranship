@@ -32,12 +32,12 @@
           <div class="flex gap-2">
             <NuxtLink
               class="text-sm md:text-base font-semibold px-3 md:px-5 py-3.5 rounded-lg bg-secondary text-white hover:bg-black transition-colors duration-500 ease-in-out"
-              :to="localePath('/services')"
+              :to="localePath('/')"
               >{{ $t("TITLES.OUR_SERVICES") }}</NuxtLink
             >
             <NuxtLink
               class="text-sm md:text-base font-semibold px-3 md:px-5 py-3.5 rounded-lg bg-secondary text-white hover:bg-black transition-colors duration-500 ease-in-out"
-              :to="localePath('/get-quote')"
+              :to="localePath('/')"
               >{{ $t("TITLES.GET_QUOTE") }}</NuxtLink
             >
           </div>

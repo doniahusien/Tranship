@@ -30,27 +30,27 @@
             <NuxtLink :to="localePath('/')">{{ $t("FOOTER.navLinks.home") }}</NuxtLink>
           </li>
           <li>
-            <NuxtLink :to="localePath('/about')">{{
+            <NuxtLink :to="localePath('/')">{{
               $t("FOOTER.navLinks.about")
             }}</NuxtLink>
           </li>
           <li>
-            <NuxtLink :to="localePath('/blog')">{{
+            <NuxtLink :to="localePath('/')">{{
               $t("FOOTER.navLinks.blog")
             }}</NuxtLink>
           </li>
           <li>
-            <NuxtLink :to="localePath('/ourservices')">{{
+            <NuxtLink :to="localePath('/')">{{
               $t("FOOTER.navLinks.services")
             }}</NuxtLink>
           </li>
           <li>
-            <NuxtLink :to="localePath('/contact')">{{
+            <NuxtLink :to="localePath('/')">{{
               $t("FOOTER.navLinks.contact")
             }}</NuxtLink>
           </li>
           <li>
-            <NuxtLink :to="localePath('/map')">{{
+            <NuxtLink :to="localePath('/')">{{
               $t("FOOTER.navLinks.sitemap")
             }}</NuxtLink>
           </li>
@@ -63,7 +63,7 @@
         </h3>
         <ul class="space-y-3 text-sm">
          <li v-for="service in servicesList" :key="service">
-         <NuxtLink :to="localePath(`/services/${service}`)">
+         <NuxtLink :to="localePath('/')">
            {{ service }}
          </NuxtLink>
     
