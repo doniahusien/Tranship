@@ -1,24 +1,50 @@
 <template>
   <footer class="bg-footer text-gray-300">
-    <div class="container mx-auto px-6 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+    <div
+      class="container mx-auto px-6 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4"
+    >
       <div>
-        <h3 class="text-white text-lg font-semibold mb-6">{{ $t("FOOTER.aboutUs") }}</h3>
+        <h3 class="text-white text-lg font-semibold mb-6">
+          {{ $t("FOOTER.aboutUs") }}
+        </h3>
         <p class="text-sm leading-relaxed">{{ $t("FOOTER.aboutDesc") }}</p>
 
-        <button aria-label="read more" class="mt-4 text-sm text-text hover:underline">
+        <button
+          aria-label="read more"
+          class="mt-4 text-sm text-text hover:underline"
+        >
           {{ $t("FOOTER.readMore") }}
         </button>
 
-        <div class="mt-6 relative">
-          <input
-            type="email"
-            :placeholder="$t('FOOTER.newsletterPlaceholder')"
-            class="w-full bg-dark text-sm px-4 py-3 rounded focus:outline-none"
-          />
-          <button aria-label="Send newsletter subscription" class="absolute end-3 top-1/2 -translate-y-1/2 text-text">
-            <Icon name="bytesize:send" />
-          </button>
-        </div>
+        <form @submit.prevent="handleNewsletterSubmit" class="mt-6">
+          <div class="relative">
+            <input
+              type="email"
+              :placeholder="$t('FOOTER.newsletterPlaceholder')"
+              class="w-full bg-dark text-sm px-4 py-4 rounded-l focus:outline-none focus:ring-2 focus:ring-accent min-h-12"
+              required
+            />
+            <button
+              type="submit"
+              aria-label="Send newsletter subscription"
+              class="absolute inset-y-0 end-0 flex items-center justify-center w-14 min-w-14 bg-accent hover:bg-accent-dark rounded-r"
+            >
+              <svg
+                class="h-6 w-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
 
       <div>
@@ -27,7 +53,9 @@
         </h3>
         <ul class="space-y-3 text-sm">
           <li>
-            <NuxtLink :to="localePath('/')">{{ $t("FOOTER.navLinks.home") }}</NuxtLink>
+            <NuxtLink :to="localePath('/')">{{
+              $t("FOOTER.navLinks.home")
+            }}</NuxtLink>
           </li>
           <li>
             <NuxtLink :to="localePath('/')">{{
@@ -62,12 +90,11 @@
           {{ $t("FOOTER.ourServices") }}
         </h3>
         <ul class="space-y-3 text-sm">
-         <li v-for="service in servicesList" :key="service">
-         <NuxtLink :to="localePath('/')">
-           {{ service }}
-         </NuxtLink>
-    
-    </li>
+          <li v-for="service in servicesList" :key="service">
+            <NuxtLink :to="localePath('/')">
+              {{ service }}
+            </NuxtLink>
+          </li>
         </ul>
       </div>
 
@@ -130,12 +157,26 @@
 </template>
 
 <script setup>
-const { t,locale } = useI18n();
+const { t, locale } = useI18n();
 const localePath = useLocalePath();
 const allServices = reactive({
-  ar: ["النقل البري","التخزين","التوصيل السريع","النقل العالمي","الشحن البحري","موثوق"],
-  en: ["Land Transport","Storage","Express Delivery","Global Shipping","Sea Freight","Reliable"]
-})
+  ar: [
+    "النقل البري",
+    "التخزين",
+    "التوصيل السريع",
+    "النقل العالمي",
+    "الشحن البحري",
+    "موثوق",
+  ],
+  en: [
+    "Land Transport",
+    "Storage",
+    "Express Delivery",
+    "Global Shipping",
+    "Sea Freight",
+    "Reliable",
+  ],
+});
 
-const servicesList = computed(() => allServices[locale.value] || [])
+const servicesList = computed(() => allServices[locale.value] || []);
 </script>
