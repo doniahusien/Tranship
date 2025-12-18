@@ -5,6 +5,7 @@
   
       <div class="grid grid-cols-3">
         <button
+        aria-label="set active category"
           v-for="item in categories"
           :key="item.key"
           @click="setActiveCategory(item.key)"
@@ -67,7 +68,7 @@
       </p>
 
       <button
-      
+      aria-label="read more about us"
         class="text-secondary rounded-md border border-secondary py-2 px-4
                  hover:bg-secondary hover:text-white"
       >
