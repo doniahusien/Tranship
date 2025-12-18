@@ -49,6 +49,8 @@
 
     <div class="absolute bottom-1/2 start-2 z-30">
       <button
+      aria-label="prev"
+
         ref="prev"
         class="opacity-0 hover:opacity-100 size-14 cursor-pointer flex items-center justify-center hover:bg-black/20 text-white rounded-full backdrop-blur-md transition-opacity duration-500 ease-in-out"
       >
