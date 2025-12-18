@@ -2,7 +2,7 @@
 @import "@nuxt/ui";
 
 @theme {
---color-secondary:rgb(249,57,53);
+--color-secondary:#A70A06;
 --color-primary:rgb(255,255,255);
 --color-text:black;
 --color-dark-white:#F5F5F5;
@@ -12,7 +12,7 @@
 --color-dark:rgb(69,69,69);
 --color-dark-footer:rgb(47,47,47);
 --color-text-gray:rgb(56,56,56);
---color-text:rgb(150,150,150);
+--color-text:#525252;
 --color-graish :rgb(97,97,97);
 --color-semi-white:rgb(248,248,248);
  --font-mon: "Montserrat", sans-serif;

@@ -104,7 +104,7 @@ const links = [
       />
 
       <ul
-        class="hidden md:flex items-center gap-3 lg:gap-5 text-sm text-sm lg:text-base font-light"
+        class="hidden md:flex items-center gap-3 lg:gap-5 text-sm  lg:text-base font-light"
       >
         <li v-for="item in links" :key="item.name" class="relative">
           <NuxtLink
