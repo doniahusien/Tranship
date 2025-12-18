@@ -14,6 +14,7 @@
       /> -->
 
       <button
+      aria-label="retry connection"
         @click="reload"
         class="bg-amber-400 hover:bg-amber-500 active:bg-amber-600 text-gray-900 font-semibold px-8 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105"
       >

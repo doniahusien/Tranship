@@ -63,6 +63,7 @@ const handleSubmit = (values: any) => {
         />
 
         <button
+        aria-label="submit contact form"
           type="submit"
           class="bg-secondary text-white px-8 py-3 rounded-md uppercase"
         >

@@ -5,7 +5,7 @@
         <h3 class="text-white text-lg font-semibold mb-6">{{ $t("FOOTER.aboutUs") }}</h3>
         <p class="text-sm leading-relaxed">{{ $t("FOOTER.aboutDesc") }}</p>
 
-        <button class="mt-4 text-sm text-text hover:underline">
+        <button aria-label="read more" class="mt-4 text-sm text-text hover:underline">
           {{ $t("FOOTER.readMore") }}
         </button>
 
@@ -15,7 +15,7 @@
             :placeholder="$t('FOOTER.newsletterPlaceholder')"
             class="w-full bg-dark text-sm px-4 py-3 rounded focus:outline-none"
           />
-          <button class="absolute end-3 top-1/2 -translate-y-1/2 text-text">
+          <button aria-label="Send newsletter subscription" class="absolute end-3 top-1/2 -translate-y-1/2 text-text">
             <Icon name="bytesize:send" />
           </button>
         </div>

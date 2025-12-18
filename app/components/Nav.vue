@@ -117,6 +117,7 @@ const links = [
           </NuxtLink>
 
           <button
+          aria-label="menu"
             v-else
             class="hover:text-secondary flex items-center gap-1"
             @mouseenter="open(item.name)"
@@ -218,6 +219,7 @@ const links = [
           <span>{{ $t(`locale.${locale}`) }}</span>
         </NuxtLink>
       <button
+      aria-label="toggle menu"
         @click="toggle = !toggle"
         class="flex md:hidden px-2  ms-2 items-center rounded-md hover:bg-gray-100 border border-gray-200"
       >

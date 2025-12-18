@@ -10,7 +10,7 @@
     <SwiperSlide
       v-for="(item, index) in testimonials"
       :key="index"
-      class="flex justify-center items-center"
+      class="flex justify-center items-center space-x-5"
     >
       <div class="relative w-full max-w-xl">
         <div
