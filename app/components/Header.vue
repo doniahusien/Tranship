@@ -1,5 +1,5 @@
 <template>
-  <header class=" bg-dark-white p-2 md:p-4 font-light fixed  w-full text-sm md:text-base">
+  <header class=" bg-dark-white p-2 md:p-4 font-light text-text fixed  w-full text-sm md:text-base">
     <div class="max-w-7xl mx-auto flex items-center md:justify-between md:px-6">
     <ul class="flex gap-5">
       <li class="flex items-center justify-center gap-1 ">
