@@ -17,7 +17,7 @@
             : 'bg-dark-gray opacity-70 hover:opacity-100'"
         >
           <Icon :name="item.icon" class="size-8 md:size-10 text-secondary" />
-          <span class="text-xs md:text-base text-text">
+          <span class="text-sn md:text-base text-text">
             {{ t(`CATEGORIES.${item.key}.NAME`) }}
           </span>
         </button>
