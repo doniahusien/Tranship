@@ -67,6 +67,7 @@
       </p>
 
       <button
+      
         class="text-secondary rounded-md border border-secondary py-2 px-4
                  hover:bg-secondary hover:text-white"
       >

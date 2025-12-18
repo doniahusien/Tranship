@@ -5,14 +5,14 @@
     <p class="py-5 ">
       {{$t('LABELS.GENERAL_DESC')}} </p>
     <div class="video-wrapper">
-      <iframe
+   <!--    <iframe
         class="video"
         src="https://www.youtube.com/embed/e9P0gyAH_QE?si=FzvhiIx6B3GWnTrA"
         title="Company Video"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
-      />
+      /> -->
     </div>
   </div>
 </template>
