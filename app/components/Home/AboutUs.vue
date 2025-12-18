@@ -5,7 +5,7 @@
   
       <div class="grid grid-cols-3">
         <button
-        aria-label="set active category"
+       :aria-label="t(`CATEGORIES.${item.key}.NAME`)"
           v-for="item in categories"
           :key="item.key"
           @click="setActiveCategory(item.key)"
@@ -43,7 +43,6 @@
             </p>
 
             <NuxtLink
-            aria-label="Read more"
               :to="localePath(`/`)"
               class="inline-block text-secondary rounded-md border border-secondary py-2 px-4
                      transition hover:bg-secondary hover:text-white"
