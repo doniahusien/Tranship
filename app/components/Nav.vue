@@ -134,7 +134,7 @@ const links = [
             leave-from-class="opacity-100 translate-y-0"
             leave-to-class="opacity-0 translate-y-2"
           >
-          <div
+          <li
             v-if="openMenu === item.name && !item.img"
             class="absolute top-full mt-4 w-64 bg-secondary p-5"
             @mouseenter="open(item.name)"
@@ -151,7 +151,7 @@ const links = [
                 </NuxtLink>
               </li>
             </ul>
-          </div>
+          </li>
       </Transition>
 
           <Transition
@@ -162,7 +162,7 @@ const links = [
             leave-from-class="opacity-100 translate-y-0"
             leave-to-class="opacity-0 translate-y-2"
           >
-          <div
+          <li
             v-if="openMenu === item.name && item.img"
             @mouseenter="open(item.name)"
             @mouseleave="close"
@@ -201,7 +201,7 @@ const links = [
                 </li>
               </ul>
             </div>
-          </div>
+          </li>
            </Transition>
         </li>
 
