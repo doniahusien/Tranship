@@ -17,22 +17,22 @@
     </ul>
     <ul class="flex justify-between ms-auto md:ms-0 ">
       <li>
-        <NuxtLink to="/">
+        <NuxtLink to="/" aria-label="facebook">
           <Icon name="ri:facebook-fill" class="text-secondary mx-2 size-4" />
         </NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/">
+        <NuxtLink to="/" aria-label="twitter">
           <Icon name="mdi:twitter" class="text-secondary mx-2 size-4" />
         </NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/">
+        <NuxtLink to="/" aria-label="linkedin">
           <Icon name="basil:linkedin-solid" class="text-secondary mx-2 size-4" />
         </NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/">
+        <NuxtLink to="/" aria-label="google plus">
           <Icon name="mdi:google-plus" class="text-secondary mx-2 size-4" />
         </NuxtLink>
       </li>
